@@ -1,0 +1,11 @@
+{
+  "name": "typescript-starter",
+  "version": "0.0.0",
+  "description": "Run TypeScript programs with eslint, prettier and semantic release support.",
+  "main": "app.js",
+  "author": "Fenando López Martínez",
+  "license": "MIT",
+  "scripts": {
+    "start": "node app.js"
+  }
+}
