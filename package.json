@@ -8,12 +8,11 @@
   "scripts": {
     "build": "tsc",
     "commit": "git-cz",
-    "develop": "yarn build && yarn start",
+    "develop": "ts-node-dev --respawn --no-notify --transpileOnly src/app.ts",
     "lint": "eslint . --ext .js,.ts",
     "prebuild": "rm -rf ./build",
     "semantic-release": "semantic-release",
-    "start": "node build/app.js",
-    "start:watch": "ts-node-dev --respawn --no-notify --transpileOnly src/app.ts"
+    "start": "node build/app.js"
   },
   "devDependencies": {
     "@commitlint/cli": "8.3.5",

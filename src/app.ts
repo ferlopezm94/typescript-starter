@@ -1,5 +1,5 @@
-const greeting = (name: string) => {
-  console.log(`Hello ${name}!`);
+const greetingUppercase = (name: string) => {
+  console.log(`Hello ${name}!`.toUpperCase());
 };
 
-greeting('world');
+greetingUppercase('world');
