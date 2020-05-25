@@ -6,6 +6,13 @@
   "author": "Fenando López Martínez",
   "license": "MIT",
   "scripts": {
-    "start": "node app.js"
+    "build": "tsc",
+    "develop": "yarn build && yarn start",
+    "prebuild": "rm -rf ./build",
+    "start": "node build/app.js"
+  },
+  "devDependencies": {
+    "@types/node": "14.0.5",
+    "typescript": "3.9.3"
   }
 }
