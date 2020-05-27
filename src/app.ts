@@ -1,5 +1,5 @@
-const greetingUppercase = (name: string) => {
-  console.log(`Hello ${name}!`.toUpperCase());
+export const greetingUppercase = (name: string): string => {
+  const uppercase = `Hello ${name}!`.toUpperCase();
+  console.log(uppercase);
+  return uppercase;
 };
-
-greetingUppercase('world');
