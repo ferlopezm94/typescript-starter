@@ -10,6 +10,7 @@ A TypeScript starter that includes support of:
 - [semantic-release](https://github.com/semantic-release/semantic-release): automates the whole package release workflow including: determining the next version number, generating the release notes and publishing the package.
 - [eslint](https://github.com/eslint/eslint): statically analyzes your code to quickly find problems.
 - [prettier](https://github.com/prettier/prettier): an opinionated code formatter that enforces a consistent style by parsing your code.
+- [jest](https://github.com/facebook/jest): a JavaScript testing framework with a focus on simplicity.
 
 ## Getting started
 
@@ -94,14 +95,25 @@ Prettier and ESLint complement each other, but they can also conflict when they 
 
 To enhance the developer experience we recommend you to install the [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) and [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) VSCode extensions. We also added a `settings.json` that will automatically apply your linting rules (as long as they are auto-fixable) every time you save your files.
 
+### Jest
+
+Testing our code is a fundamental part to ensure we're shipping code that works. Only through testing can you confidently deliver confident, professional code, change after change.
+
+For that reason jest is an important part of our setup. It includes a wide variety of tools that allow us to create, run and structure tests.
+
+Add new tests inside `__tests__` folders and run them using `yarn test`. To get test coverage information run `yarn test:coverage`.
+
+To enhance the developer experience when reviewing jest snapshots we recommend you to install the [snapshot-tools](https://marketplace.visualstudio.com/items?itemName=asvetliakov.snapshot-tools) VSCode extension.
+
 ### GitHub templates and workflows
 
 To ensure a standard when creating Pull Requests or Issues (bug or feature request) we've included some templates inside the `.github` folder.
 
 To automate the release of new versions we're using GitHub Actions to run the following workflows:
 
-- Verify pull request base branch: Run when a pull request to the `master` branch is open. It will verify the base branch is `dev` and will fail if not the case.
-- Set release version: Run when changes are pushed to `master`. It will run `semantic-release` and sync the `master` branch with `dev`. To enable this workflow in your repository add the `GH_TOKEN` based on a personal access token with repo scope.
+- **Continuous integration:** Run on each pull request open to either `master` or `dev` branches. It will run eslint, the automated tests and build the project. If there's an error it will fail, ensuring a new change doesn't break the current codebase.
+- **Verify pull request base branch:** Run when a pull request to the `master` branch is open. It will verify the base branch is `dev` and will fail if not the case.
+- **Set release version:** Run when changes are pushed to `master`. It will run `semantic-release` and sync the `master` branch with `dev`. To enable this workflow in your repository add the `GH_TOKEN` based on a personal access token with repo scope.
 
 To disable a given workflow simply remove the file.
 
