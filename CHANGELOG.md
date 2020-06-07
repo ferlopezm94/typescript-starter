@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/ferlopezm94/typescript-starter/compare/v1.1.0...v1.1.1) (2020-06-07)
+
+
+### Bug Fixes
+
+* **semantic-release:** add plugin to set version in package.json ([c0a45b0](https://github.com/ferlopezm94/typescript-starter/commit/c0a45b06fe67c502879c11aca5ff1333cec77a1e))
+
 # [1.1.0](https://github.com/ferlopezm94/typescript-starter/compare/v1.0.0...v1.1.0) (2020-05-27)
 
 
