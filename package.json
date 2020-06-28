@@ -9,6 +9,7 @@
     "build": "tsc",
     "commit": "git-cz",
     "develop": "ts-node-dev --respawn --no-notify --transpileOnly src/app.ts",
+    "develop:inspect": "ts-node-dev --inspect-brk --respawn --no-notify --transpileOnly src/app.ts",
     "lint": "eslint . --ext .js,.ts",
     "prebuild": "rm -rf ./build",
     "semantic-release": "semantic-release",
