@@ -14,7 +14,7 @@
     "prebuild": "rm -rf ./build",
     "semantic-release": "semantic-release",
     "start": "node build/app.js",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "test:coverage": "jest --coverage"
   },
   "devDependencies": {
