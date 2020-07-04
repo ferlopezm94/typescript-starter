@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/ferlopezm94/typescript-starter/compare/v1.1.1...v1.1.2) (2020-07-04)
+
+
+### Bug Fixes
+
+* **scripts:** pass tests if none is found ([44d9ae1](https://github.com/ferlopezm94/typescript-starter/commit/44d9ae14d8a53779eab0e299f69f52abb0dd966d))
+
 ## [1.1.1](https://github.com/ferlopezm94/typescript-starter/compare/v1.1.0...v1.1.1) (2020-06-07)
 
 
