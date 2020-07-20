@@ -8,14 +8,15 @@
   "scripts": {
     "build": "tsc",
     "commit": "git-cz",
-    "develop": "ts-node-dev --respawn --no-notify --transpileOnly src/app.ts",
-    "develop:inspect": "ts-node-dev --inspect-brk --respawn --no-notify --transpileOnly src/app.ts",
+    "dev": "ts-node-dev --respawn --no-notify --transpileOnly src/app.ts",
+    "dev:inspect": "ts-node-dev --inspect-brk --respawn --no-notify --transpileOnly src/app.ts",
     "lint": "eslint . --ext .js,.ts",
     "prebuild": "rm -rf ./build",
     "semantic-release": "semantic-release",
     "start": "node build/app.js",
-    "test": "jest --passWithNoTests",
-    "test:coverage": "jest --coverage"
+    "test": "jest --passWithNoTests --runInBand",
+    "test:watch": "jest --passWithNoTests --runInBand --watch",
+    "test:coverage": "jest --runInBand --coverage"
   },
   "devDependencies": {
     "@commitlint/cli": "8.3.5",
