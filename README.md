@@ -43,6 +43,14 @@ $ yarn develop
 
 `ts-node-dev` will compile and start your program. You can start making some changes and each one will trigger a restart to your program.
 
+Finally, remove all related to this repo:
+
+- Remove git repo `rm -rf .git` and CHANGELOG.md
+- Update README.md accordingly (e.g. project name, repo url)
+- Update project info in package.json (name, set version to 0.0.0, change description)
+- Remove \_\_tests\_\_ folder and empty main.ts file
+- Init git repo and create first commit `chore(repo): add basic files`
+
 ### Build
 
 To create a production build simply run:
