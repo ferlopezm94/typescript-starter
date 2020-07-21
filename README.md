@@ -25,7 +25,7 @@ Make sure the following tools are installed in your system:
 
 ### Installation
 
-Clone the GitHub repository and user `yarn` to install the dependencies.
+Clone the GitHub repository and use `yarn` to install the dependencies:
 
 ```
 $ git clone https://github.com/ferlopezm94/typescript-starter.git
@@ -40,17 +40,17 @@ $ yarn install
 To start developing simply run:
 
 ```
-$ yarn develop
+$ yarn dev
 ```
 
 `ts-node-dev` will compile and start your program. You can start making some changes and each one will trigger a restart to your program.
 
-Finally, remove all related to this repo:
+Finally, remove all things related to this repo:
 
-- Remove git repo `rm -rf .git` and CHANGELOG.md
+- Remove CHANGELOG.md and the git repo with `rm -rf .git`
 - Update README.md accordingly (e.g. project name, repo url)
 - Update project info in package.json (name, set version to 0.0.0, change description)
-- Remove \_\_tests\_\_ folder and empty main.ts file
+- Remove \_\_tests\_\_ folder and empty `main.ts` file
 - Init git repo and create first commit `chore(repo): add basic files`
 
 ### Build
@@ -75,7 +75,7 @@ $ yarn start
 
 Commit messages are an essential part of software development because they allow us to communicate why our code changed. They're useful for your collaborators and also for your future self, so having a good convention from the beginning will facilitate development.
 
-To enforce a good convention is followed we're using Commitizen and Commitlint.
+To enforce a good convention is followed we're using [Commitizen](https://github.com/commitizen/cz-cli) and [Commitlint](https://github.com/conventional-changelog/commitlint).
 
 Commitizen is a command line utility that will prompt you to fill in any required fields (run with `yarn commit`) and your commit messages will be formatted according to the standards defined by project maintainers. In our case, we're using the [conventional changelog](https://github.com/conventional-changelog/conventional-changelog) standard with the following structure:
 
@@ -85,7 +85,7 @@ type(scope): subject
 
 Commitlint is a linter for our commit messages and checks if they meet the [conventional commit format](https://www.conventionalcommits.org).
 
-Commitizen and commitlint will enforce we're creating conventional commit messages and in conjunction with [husky](https://github.com/typicode/husky) they will prevent us from committing changes without the proper message structure.
+Commitizen and commitlint will enforce we're creating conventional commit messages and, with the help of [husky](https://github.com/typicode/husky), they will prevent us from committing changes without the proper message structure.
 
 ### Semantic release
 
@@ -95,7 +95,7 @@ Semantic release uses the commit messages to determine the type of changes in th
 
 ### ESLint and Prettier
 
-Just as a good commit convention is important, so is it a good style guide to write consistent, reusable and clean code. That's what ESLint will be use for, to identify and report on patterns found in our codebase that don't follow a set of stablished rules.
+Just as a good commit convention is important, so it is a good style guide to write consistent, reusable, and clean code. That's what ESLint will be used for, to identify and report on patterns found in our codebase that don't follow a set of established rules.
 
 In conjunction with [lint-staged](https://github.com/okonet/lint-staged) and [husky](https://github.com/typicode/husky), we'll be able to run ESLint against staged git files in a pre-commit check (run after staging your changes and running `git commit` and before a commit is completed).
 
